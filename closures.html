@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOSURE FUNCTION </title>
+</head>
+<body>
+</body>
+<script>
+                  // CLOSURE FUNCTION 
+
+            //  Example 1: Simple Counter Closure
+
+function createCounter() {         // 1
+    let count = 0;                 // 2
+
+    function increment() {         // 3
+        count++;                   // 4
+        console.log(count);        // 5
+    }
+
+    return increment;              // 6
+}
+
+const myCounter = createCounter();  // 7
+myCounter();                        // 8
+myCounter();                        // 9
+myCounter();                        // 10      
+
+
+//   Example 2: Greeting Closure
+    
+function greetUser(name) {             
+   
+    return function() {                
+        
+        console.log("Hello " + name);  
+    };
+}
+  let greetHafsa = greetUser("Hafsa");  
+    greetHafsa();                            
+    greetHafsa();                            
+
+</script>
+</html>
