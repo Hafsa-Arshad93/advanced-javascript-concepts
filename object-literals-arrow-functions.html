@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+        
+             //  Topic 8 = Arrow Function 
+
+// Normal function
+function add(a, b) {
+  return a + b;
+}
+
+// Arrow function
+const add = (a, b) => {
+  return a + b;
+};
+
+console.log(add(2, 3)); // 5
+
+//  2. One line function → no { } and no return
+
+const add = (a, b) => a + b;
+console.log(add(2, 3));   // 5
+
+// 3. One parameter → no need of parentheses
+
+const greet = name => "Hello " + name;
+console.log(greet("Hafsa")); // Hello Hafsa
+
+//  4. No parameters → must use empty ( )
+
+const sayHello = () => "Hello World!";
+console.log(sayHello()); // Hello World!
+
+    // ✨ Summary:
+
+//          => = shortcut
+//     1 line = no { } no return
+//    1 parameter = no ( )
+//     0 parameter = need ( )
+
+
+
+//                  Topic 9 
+//         Enhanced Object Literals in JavaScript
+           
+let firstName = "Ali";
+let field = "score";
+
+
+let player = {
+  firstName,
+  lastName :"Khan",
+  [field]: 99,
+  greet() {
+    return `Hello, I’m ${this.firstName} ${this.lastName}!`;
+  }
+};
+
+console.log(player.greet()); 
+// Hello, I’m Ali Khan!
+console.log(player.score); 
+// 99
+        //  OR
+console.log(player[field]) //99
+
+
+
+
+
+
+
+
+
+</script>
+</html>

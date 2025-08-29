@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <!-- Topic 5-6-7 -->
+</body>
+<script>
+        // Topic 5
+//  Rest Parameter – Example 1
+  
+function addNumbers(...numbers) {
+  console.log(numbers);
+}
+
+addNumbers(1, 2, 3, 4, 5);
+
+// Rest Parameter – Example 2
+
+function packSnacks(...snacks) {
+  console.log("Snacks packed: " + snacks.join(", "));
+}
+
+packSnacks("Chips", "Biscuits", "Juice", "Chocolate");
+
+//   Topic 6   = Default Parameters
+
+function greet(name = "Friend") {
+  console.log("Hello " + name);
+}
+
+greet();          // no name given
+greet("Hafsa");   // name given
+
+     // EXAMPLE 2
+function makeSandwich(bread = "White", filling = "Cheese") {
+console.log("Your sandwich has " + bread + " bread with " + filling + " filling.");
+}
+
+makeSandwich();                      // no values given
+makeSandwich("Brown");               // only bread given
+ makeSandwich("Brown", "Chicken");    // bread + filling given
+
+
+// Without Default Parameters
+
+function makeSandwich(bread, filling) {
+  console.log( bread + filling );
+}
+
+makeSandwich();                      // no values given
+ makeSandwich("Brown");               // only bread given
+ makeSandwich("Brown", "Chicken");    // bread + filling given
+
+//      Topic 7= Spread operator ... 
+//       Example 1: 
+
+let number1 = [1, 2, 3];
+console.log(...number1);  
+
+// Example 2: Combine arrays
+
+let fruits = ["apple", "banana"];
+let moreFruits = ["mango", "orange"];
+
+let allFruits = [...fruits, ...moreFruits];
+console.log(allFruits);
+
+
+
+</script>
+</html>

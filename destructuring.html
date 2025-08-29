@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//             Topic 4 :Destructuring
+
+//           Normally, for arrays:
+let colors = ["red", "green", "blue"];
+let first = colors[0];
+let second = colors[1];
+let third = colors[2];
+console.log(first,second,third);
+
+//            But with  Destructuring:
+let colour = [ "red", "green", "blue"];
+let [ first2,second2,third3 ]= colour;
+console.log(first,second,third);
+
+  // Example 1: Array Destructuring
+     let numbers = [10, 20, 30];
+     let [x,y,z] = numbers;
+     console.log(x,y,z) ;     
+//  Purpose of destructuring: Quickly take values from array and put them in variables
+
+// Example 2: Object Destructuring
+
+let person = {name: "Hafsa", 
+             age: 20,
+             school:"SMIT"
+             };
+ let {name ,age ,school}  = person;
+ console.log(name,age,school) ;    
+ 
+// Purpose of destructuring objects: Take values from objects without writing person.name, person.age repeatedly
+
+
+           // Practice Tip:
+// 1.Try destructuring an array of your favorite fruits
+
+// 2.Try destructuring an object with your name, city, and hobby
+
+</script>
+</html>
