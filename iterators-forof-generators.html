@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// TOPIC 10: Iterators & for..of
+
+//     Example
+
+let arr = ["A", "B", "C"];
+let iterator = arr[Symbol.iterator]();
+
+console.log(iterator.next()); // { value: "A", done: false }
+console.log(iterator.next()); // { value: "B", done: false }
+console.log(iterator.next()); // { value: "C", done: false }
+console.log(iterator.next()); // { value: undefined, done: true }
+ 
+//           for..of Loop
+
+//     Instead of manually calling .next(), JavaScript gives us the for..of loop,
+//     which uses iterators internally.
+
+//      Example 
+let arr1 = ["A", "B", "C"];
+
+for (let item of arr1) {
+  console.log(item);
+};
+
+
+//         TOPIC 11 :   GENERETOR 
+
+//                 Example
+
+function* range(start, end) {
+  for (let i = start; i <= end; i++) {
+    yield i;
+  }
+}
+
+// use it
+let nums = range(1, 5);
+
+console.log(nums.next().value); // 1
+console.log(nums.next().value); // 2
+console.log(nums.next().value); // 3
+console.log(nums.next().value); // 4
+console.log(nums.next().value); // 5
+console.log(nums.next());       // { value: undefined, done: true }
+
+
+</script>
+</html>

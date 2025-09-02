@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ //        Topic 15: Higher-order-functions
+//          Example 1
+
+// Normal function (cookie cutter)
+function normalFun(num) {
+  return num * 2;
+}
+
+// Higher-order function (accepts another function)
+function processNumbers(numbers, operation) {
+  return numbers.map(operation); 
+}
+
+let result = processNumbers([1, 2, 3], normalFun); // 2 arguments here
+console.log(result); // [2, 4, 6]
+
+//             Example 2
+
+// Higher-order function (returns another function)
+function cookieCutter(flavor) {
+  return function() {
+    return "Here is a " + flavor + " cookie ";
+  }
+}
+
+// Use karna
+let chocoCutter = cookieCutter("Chocolate");
+let vanillaCutter = cookieCutter("Vanilla");
+
+console.log(chocoCutter()); // "Here is a Chocolate cookie "
+console.log(vanillaCutter()); // "Here is a Vanilla cookie "
+ 
+// Example 3
+
+function jump() {
+  return "Player jumps ";
+}
+
+function run() {
+  return "Player runs ";
+}
+
+// Higher-Order Function
+function performAction(actionFn) {
+  return actionFn(); 
+}
+
+// Use karna
+console.log(performAction(jump)); // "Player jumps "
+console.log(performAction(run));  // "Player runs "
+
+
+//             Example 4
+//  we have two ways to make a normal function a "HOF" 
+//         WAY -1
+function slow(name) {
+  return  name;
+}
+ console.log(sayHello("Hafsa")); //  -->NORMAL FUNCTION
+
+//     HOF
+
+function greetUser(fun, userName) { 
+  return slow (userName); 
+}
+
+console.log(greetUser(slow, "Hafsa")); 
+//         WAY -2
+function slow() {
+  return function(userName) {
+    return  userName;
+  };
+}
+const greetUser = slow();       
+console.log(greetUser("Hafsa")); 
