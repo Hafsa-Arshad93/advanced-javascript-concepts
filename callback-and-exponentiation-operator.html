@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Topic .16 Callback Function 
+
+
+//  Example 1
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();   
+}
+
+function sayBye() {
+  console.log("Goodbye!");
+}
+
+
+greet("Zain", sayBye);
+
+//          Example 2
+
+function sayBye() {   
+  console.log("Goodbye!");
+}
+
+function greet(name, callback) {   
+  console.log("Hello " + name);
+  callback();  
+}
+
+greet("Hafsa", sayBye);
+
+//  TOPIC 17 : Exponentiation Operator (**)
+
+
+// Example:1
+
+console.log(2 ** 3);   // 8  (2 × 2 × 2)
+console.log(5 ** 2);   // 25 (5 × 5)
+console.log(10 ** 0);  // 1
+
+// Example:02
+
+let x = 4;
+x **= 2;   // same as x = x ** 2
+console.log(x);  // 16
+
+
+</script>
+</html>
